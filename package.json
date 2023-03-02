@@ -1,0 +1,58 @@
+{
+  "name": "discordium",
+  "description": "A lightweight, fast and customizable alternative to official Discord client.",
+  "author": {
+    "name": "Heimsk",
+    "url": "https://github.com/Heimsk/Discordium"
+  },
+  "version": "0.0.1",
+  "engines": {
+    "node": ">=15.0.0"
+  },
+  "private": true,
+  "scripts": {
+    "build": "qwik build",
+    "build.client": "vite build",
+    "build.preview": "vite build --ssr src/entry.preview.tsx",
+    "build.types": "tsc --incremental --noEmit",
+    "deploy": "echo 'Run \"npm run qwik add\" to install a server adapter'",
+    "dev": "vite --mode ssr",
+    "dev.debug": "node --inspect-brk ./node_modules/vite/bin/vite.js --mode ssr --force",
+    "fmt": "prettier --write .",
+    "fmt.check": "prettier --check .",
+    "lint": "eslint \"src/**/*.ts*\"",
+    "preview": "qwik build preview && vite preview --open",
+    "start": "vite --open --mode ssr",
+    "qwik": "qwik",
+    "commit": "cz",
+    "prepare": "husky install && husky add .husky/commit-msg  'pnpm commitlint --edit ${1}' && commitizen init cz-conventional-changelog --pnpm --save-dev --save-exact"
+  },
+  "devDependencies": {
+    "@builder.io/qwik": "0.20.1",
+    "@builder.io/qwik-city": "0.5.2",
+    "@commitlint/cli": "^17.4.4",
+    "@commitlint/config-conventional": "^17.4.4",
+    "@types/eslint": "8.21.1",
+    "@types/node": "^18.14.0",
+    "@types/node-fetch": "latest",
+    "@typescript-eslint/eslint-plugin": "5.54.0",
+    "@typescript-eslint/parser": "5.54.0",
+    "commitizen": "^4.3.0",
+    "cz-conventional-changelog": "^3.3.0",
+    "eslint": "8.35.0",
+    "eslint-plugin-qwik": "0.20.1",
+    "husky": "^8.0.3",
+    "node-fetch": "3.3.0",
+    "prettier": "2.8.4",
+    "sass": "^1.58.3",
+    "typescript": "4.9.5",
+    "undici": "5.20.0",
+    "vite": "4.1.4",
+    "vite-tsconfig-paths": "3.5.0"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
