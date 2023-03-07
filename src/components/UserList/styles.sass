@@ -1,0 +1,25 @@
+#userlist
+  width: 240px
+  min-height: 100%
+  background: var(--secondary)
+  padding: 16px 6px 6px 16px
+
+  & > .role
+    width: 100%
+    display: flex
+    flex-direction: column
+    
+    &:not(:first-child)
+      margin-top: 20px
+
+    & > .userbutton
+      margin-top: 5px
+
+    & > .header
+      color: var(--gray)
+      text-transform: uppercase
+      font-weight: bold
+      font-size: 12px
+
+      &::after
+        content: ' - 2'

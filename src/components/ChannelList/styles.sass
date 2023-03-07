@@ -1,0 +1,103 @@
+#channellist
+  width: 240px
+  height: 100%
+  background-color: var(--secondary)
+  padding: 24px 9.5px 0 16px
+
+  & .channel
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 5px 3px
+    cursor: pointer
+    border-radius: 5px
+    background: transparent
+    transition: var(--transition)
+
+    &:hover
+      background: var(--quinary)
+      
+      & > .actions
+        display: flex
+
+      & > .name span
+        color: var(--white)
+
+    & > .actions
+      display: none
+
+      & > i
+        width: 16px
+        height: 16px
+        color: var(--symbol)
+        transition: var(--transition)
+
+        &:first-child
+          margin-right: 5px
+
+        &:hover
+          color: var(--white)
+
+    & > div
+      display: flex
+      align-items: center
+
+    & > .name
+      & > span
+        font-size: 15px
+        color: var(--senary)
+        margin-left: 5px
+        transition: var(--transition)
+        max-width: 145px
+        overflow: hidden
+        white-space: nowrap
+        text-overflow: ellipsis
+      
+      & > i
+        width: 20px
+        height: 20px
+        display: block
+        color: var(--symbol)
+  
+  & > .category
+    width: 100%
+    cursor: pointer
+    display: flex
+    flex-direction: column
+    margin-top: 15px
+
+    &:first-child
+      margin-top: 0
+
+    & > .header
+      text-transform: uppercase
+      font-size: 12px
+      font-weight: bold
+      color: var(--gray)
+      display: flex
+      align-items: center
+      justify-content: space-between
+
+      &:hover > .name
+        color: var(--white)
+
+      & > .name
+        display: flex
+        align-items: center
+        transition: var(--fast-transition)
+
+        & > i
+          width: 10px
+          height: 10px
+          margin-right: 2px
+          margin-bottom: 4px
+
+      & > i
+        width: 21px
+        height: 21px
+        display: block
+        transition: var(--fast-transition)
+        cursor: pointer
+
+        &:hover
+          color: var(--white)

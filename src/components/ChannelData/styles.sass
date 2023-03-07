@@ -1,0 +1,86 @@
+#channeldata
+  width: calc(100% - 551px)
+  display: flex
+  flex-direction: column
+  height: calc(100% - 46px)
+  background: var(--primary)
+  position: absolute
+  top: 46px
+  overflow-y: hidden
+
+  & > #messages
+    display: flex
+    flex-direction: column
+    width: 100%
+    height: auto
+    bottom: 0
+    position: absolute
+    max-height: 100%
+    overflow-y: auto
+    padding-bottom: 75px
+
+    &::-webkit-scrollbar
+      width: 8px
+
+    &::-webkit-scrollbar-thumb
+      background: var(--tertiary)
+      border-radius: 4px
+
+    &::-webkit-scrollbar-track
+      background-color: var(--quinary)
+      border-radius: 4px
+
+  & > #channelinput
+    width: calc(100% - 8px)
+    height: auto
+    position: absolute
+    bottom: 0
+    right: 8px
+    padding-left: 16px
+    padding-bottom: 30px
+    background: var(--primary)
+
+    & > i#add 
+      width: 26px
+      height: 26px
+      color: var(--white)
+      display: block
+      position: absolute
+      top: 8px
+      left: 29px
+      opacity: 0.7
+      transition: var(--fast-transition)
+      cursor: pointer
+
+      &:hover
+        opacity: 1
+
+    & > #input
+      width: calc(100% - 32px)
+      background: var(--chat-input)
+      color: var(--gray)
+      border: none
+      outline: none
+      min-height: 44px
+      font-size: 15px
+      border-radius: 7px
+      padding: 12px 10px 10px 57px
+      max-height: 50vh
+      overflow-y: auto
+
+      &::-webkit-scrollbar
+        width: 8px
+
+      &::-webkit-scrollbar-thumb
+        background: var(--tertiary)
+        border-radius: 4px
+
+      &::-webkit-scrollbar-track
+        background: var(--secondary)
+
+      &:not(:empty)
+        color: var(--white)
+
+      &:empty:before
+        content: "Converse em #chat-geral"
+        pointer-events: none
