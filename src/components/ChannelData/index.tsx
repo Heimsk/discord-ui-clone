@@ -1,8 +1,21 @@
-import { component$ } from "@builder.io/qwik";
+import { component$, useBrowserVisibleTask$ } from "@builder.io/qwik";
 import { Message } from "../Message";
 import "./styles.sass";
 
 export const ChannelData = component$(() => {
+  useBrowserVisibleTask$(() => {
+    setInterval(() => {
+      const input = document.getElementById("channelinput");
+      const messages = document.getElementById("messages");
+
+      if (input) {
+        if (messages) {
+          messages.style.paddingBottom = `${input.offsetHeight}px`;
+        }
+      }
+    }, 100);
+  });
+
   return (
     <>
       <div id="channeldata">
