@@ -1,6 +1,6 @@
 {
-  "name": "discordium",
-  "description": "A lightweight, fast and customizable alternative to official Discord client.",
+  "name": "discord-ui-clone",
+  "description": "A clone of the Discord interface, made with Qwik, SASS, HTML and TypeScript",
   "author": {
     "name": "Heimsk",
     "url": "https://github.com/Heimsk/Discordium"
