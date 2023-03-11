@@ -3,7 +3,7 @@
   "description": "A clone of the Discord interface, made with Qwik, SASS, HTML and TypeScript",
   "author": {
     "name": "Heimsk",
-    "url": "https://github.com/Heimsk/Discordium"
+    "url": "https://github.com/Heimsk/discord-ui-clone"
   },
   "version": "0.0.1",
   "engines": {
