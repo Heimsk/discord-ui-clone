@@ -1,3 +1,3 @@
 ## Discordium
 
-A lightweight, fast and customizable alternative to official Discord client, still in intense development.
+A clone of the Discord interface, made with Qwik, SASS, HTML and TypeScript
